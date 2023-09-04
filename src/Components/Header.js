@@ -1,12 +1,22 @@
 import React from 'react';
+import Logo from '../photos/logo.png';
+import '../App.css';
 
-export default function Header(props) {
+export default function Header() {
   return (
-    <nav className="navbar navbar-expand-lg bg-dark">
+    <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand text-white" href="#">
-          {props.title}
-        </a>
+        <div className="navbar-brand">
+          <img
+            src={Logo}
+            alt="logo"
+            style={{
+              height: '65px',
+              marginRight: '15px'
+            }}
+          />
+        </div>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -21,12 +31,12 @@ export default function Header(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active text-white" aria-current="page" href="#">
+              <a className="nav-link active text-dark" aria-current="page" href="/">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white" href="#">
+              <a className="nav-link text-dark" href="/about">
                 About
               </a>
             </li>
